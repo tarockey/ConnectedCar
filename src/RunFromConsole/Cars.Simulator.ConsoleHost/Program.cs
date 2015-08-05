@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+//THIS IS JUST A TEST COMMENT FOR COMMITTING
 namespace Microsoft.Practices.DataPipeline.Cars.Simulator.ConsoleHost
 {
     using System;
