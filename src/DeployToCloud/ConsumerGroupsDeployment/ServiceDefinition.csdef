@@ -5,6 +5,7 @@
       <Task taskType="simple" executionContext="elevated" commandLine="setup\install.cmd">
       </Task>
     </Startup>
+
     <ConfigurationSettings>
       <Setting name="Dispatcher.ConsumerGroupName" />
       <Setting name="Dispatcher.CheckpointStorageAccount" />
@@ -32,6 +33,10 @@
     <LocalResources>
       <LocalStorage name="TelemetryArchive" cleanOnRoleRecycle="false" />
     </LocalResources>
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
   </WorkerRole>
   <WorkerRole name="ColdStorage.WorkerRole" vmsize="Small">
     <Startup>
@@ -65,5 +70,8 @@
     <LocalResources>
       <LocalStorage name="TelemetryArchive" cleanOnRoleRecycle="false" />
     </LocalResources>
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+    </Imports>
   </WorkerRole>
 </ServiceDefinition>

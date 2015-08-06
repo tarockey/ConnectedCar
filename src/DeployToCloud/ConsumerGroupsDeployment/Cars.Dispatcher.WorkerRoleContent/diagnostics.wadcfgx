@@ -44,12 +44,10 @@
           <PerformanceCounterConfiguration counterSpecifier="\Process(WaWorkerHost)\Virtual Bytes Peak" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\Process(WaWorkerHost)\Working Set" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\Process(WaWorkerHost)\Working Set - Private" sampleRate="PT3M" />
-
           <PerformanceCounterConfiguration counterSpecifier="\EventHub Dispatcher(WaWorkerHost)\Total tasks faulted" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\EventHub Dispatcher(WaWorkerHost)\Total processed messages" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\EventHub Dispatcher(WaWorkerHost)\Total timeouts" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\EventHub Dispatcher(WaWorkerHost)\Current task count" sampleRate="PT3M" />
-
           <PerformanceCounterConfiguration counterSpecifier="\Service Bus Messaging Client(*)\MessageFactory Count" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\Service Bus Messaging Client(*)\Exceptions/sec" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\Service Bus Messaging Client(*)\ReceiveMessage Success Count" sampleRate="PT3M" />
@@ -68,10 +66,10 @@
         <Logs scheduledTransferPeriod="PT1M" scheduledTransferLogLevelFilter="Error" />
       </DiagnosticMonitorConfiguration>
     </WadCfg>
-    <StorageAccount />
+    <StorageAccount>t12diagstore</StorageAccount>
   </PublicConfig>
   <PrivateConfig xmlns="http://schemas.microsoft.com/ServiceHosting/2010/10/DiagnosticsConfiguration">
-    <StorageAccount name="" endpoint="" />
+    <StorageAccount name="t12diagstore" endpoint="https://core.windows.net/" />
   </PrivateConfig>
   <IsEnabled>true</IsEnabled>
 </DiagnosticsConfiguration>

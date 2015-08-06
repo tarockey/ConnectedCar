@@ -70,6 +70,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provisioning", "Provisionin
 		Provisioning\CopyOutputToConfigFile.ps1 = Provisioning\CopyOutputToConfigFile.ps1
 		Provisioning\CopyOutputToServiceConfigFiles.ps1 = Provisioning\CopyOutputToServiceConfigFiles.ps1
 		Provisioning\CreateEventHub.ps1 = Provisioning\CreateEventHub.ps1
+		Provisioning\ProvisionAllAssets.ps1 = Provisioning\ProvisionAllAssets.ps1
 		Provisioning\ProvisionAssets.ps1 = Provisioning\ProvisionAssets.ps1
 		Provisioning\ProvisionStorageAccount.ps1 = Provisioning\ProvisionStorageAccount.ps1
 	EndProjectSection

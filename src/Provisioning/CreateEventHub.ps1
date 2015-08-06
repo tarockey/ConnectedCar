@@ -59,7 +59,7 @@ Param(
     [ValidatePattern("^[A-Za-z0-9]$|^[A-Za-z0-9][\w-\.\/]*[A-Za-z0-9]$")] 
     [String]$Path,                                  # required    needs to start with letter or number, and contain only letters, numbers, periods, hyphens, and underscores.
     [Int]$PartitionCount = 16,                      # optional    default to 16 
-    [Int]$MessageRetentionInDays = 7,               # optional    default to 7 
+    [Int]$MessageRetentionInDays = 1,               # optional    default to 1 
     [String]$UserMetadata = $null,                  # optional    default to $null 
     [String]$ColdStorageConsumerGroupName = "ColdStorage", # optional    default to "MyConsumerGroup" 
     [string]$DispatcherConsumerGroupName = "Dispatcher",

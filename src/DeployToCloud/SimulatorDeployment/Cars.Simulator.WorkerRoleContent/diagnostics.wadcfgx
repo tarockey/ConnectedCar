@@ -44,14 +44,11 @@
           <PerformanceCounterConfiguration counterSpecifier="\Process(WaWorkerHost)\Virtual Bytes Peak" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\Process(WaWorkerHost)\Working Set" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\Process(WaWorkerHost)\Working Set - Private" sampleRate="PT3M" />
-
           <PerformanceCounterConfiguration counterSpecifier="\Service Bus Messaging Client(*)\SendMessage Success/sec" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\Service Bus Messaging Client(*)\SendMessage Success Count" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\Service Bus Messaging Client(*)\SendMessage Failure Count" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\Service Bus Messaging Client(*)\SendMessage Failures/sec" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\Service Bus Messaging Client(*)\SendMessage Latency" sampleRate="PT3M" />
-
-
           <PerformanceCounterConfiguration counterSpecifier="\EventHub Sender(WaWorkerHost)\Total messages sent" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\EventHub Sender(WaWorkerHost)\Total messages requested" sampleRate="PT3M" />
           <PerformanceCounterConfiguration counterSpecifier="\EventHub Sender(WaWorkerHost)\Messages sent per sec" sampleRate="PT3M" />
@@ -69,10 +66,10 @@
         <Logs scheduledTransferPeriod="PT1M" scheduledTransferLogLevelFilter="Error" />
       </DiagnosticMonitorConfiguration>
     </WadCfg>
-    <StorageAccount />
+    <StorageAccount>t12diagstore</StorageAccount>
   </PublicConfig>
   <PrivateConfig xmlns="http://schemas.microsoft.com/ServiceHosting/2010/10/DiagnosticsConfiguration">
-    <StorageAccount name="" endpoint="" />
+    <StorageAccount name="t12diagstore" endpoint="https://core.windows.net/" />
   </PrivateConfig>
   <IsEnabled>true</IsEnabled>
 </DiagnosticsConfiguration>

@@ -1,5 +1,8 @@
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using System.Diagnostics;
+
 namespace Microsoft.Practices.DataPipeline.Cars.Dispatcher
 {
     using System;
@@ -67,7 +70,7 @@ namespace Microsoft.Practices.DataPipeline.Cars.Dispatcher
                             configuration.CircuitBreakerStallInterval,
                             configuration.CircuitBreakerLogCooldownInterval),
                             new DispatcherInstrumentationManager(instrumentationEnabled: true).CreatePublisher("WaWorkerHost")).Result;
-
+                
                 bool result = base.OnStart();
 
                 return result;
@@ -78,8 +81,11 @@ namespace Microsoft.Practices.DataPipeline.Cars.Dispatcher
                 // Ensure that we log this error, including a direct post to the local
                 // event log
                 LogHelpers.HandleRoleException(Logger, "OnStart()", ex);
+                Trace.TraceError(ex.ToString());
+
                 throw;
             }
+            
         }
 
         public override void Run()
