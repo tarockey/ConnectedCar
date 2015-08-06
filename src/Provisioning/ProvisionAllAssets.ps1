@@ -1,6 +1,6 @@
 #Requires -Version 3.0
 <#
-.SYNOPSIS
+.SYNOPSI
 Provision an Azure Storage Account and a Service Bus Event Hub.
 
 .DESCRIPTION
