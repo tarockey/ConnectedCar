@@ -1,0 +1,20 @@
+﻿{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+  "parameters": {
+    "ContosoStorageAccount1_T12Location": {
+      "value": "Central US"
+    },
+    "ContosoStorageAccount2_T12Location": {
+      "value": "Central US"
+    },
+    "ContosoStorageAccount1_T12Name": {
+      "value": "t12msgstore"
+    },
+    "ContosoStorageAccount2_T12Name": {
+      "value": "t12poisonstore"
+    }
+   
+   } 
+
+  }

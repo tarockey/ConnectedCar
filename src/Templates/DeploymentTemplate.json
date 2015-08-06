@@ -1,0 +1,91 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "ContosoStorageAccount1_T12Name": {
+      "type": "string"
+    },
+    "ContosoStorageAccount1_T12Type": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "allowedValues": [
+        "Standard_LRS",
+        "Standard_GRS",
+        "Standard_ZRS"
+      ]
+    },
+    "ContosoStorageAccount1_T12Location": {
+      "type": "string",
+      "defaultValue": "West US",
+      "allowedValues": [
+        "East US",
+        "West US",
+        "West Europe",
+        "East Asia",
+		"Central US",
+        "South East Asia"
+      ]
+    },
+    "ContosoStorageAccount2_T12Name": {
+      "type": "string"
+    },
+    "ContosoStorageAccount2_T12Type": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "allowedValues": [
+        "Standard_LRS",
+        "Standard_GRS",
+        "Standard_ZRS"
+      ]
+    },
+    "ContosoStorageAccount2_T12Location": {
+      "type": "string",
+      "defaultValue": "West US",
+      "allowedValues": [
+        "East US",
+        "West US",
+        "West Europe",
+        "East Asia",
+        "South East Asia",
+		"Central US"
+      ]
+    
+     } 
+
+   },
+
+  "variables": {
+      },
+
+  "resources": [
+     
+      {
+      "name": "[parameters('ContosoStorageAccount1_T12Name')]",
+      "type": "Microsoft.Storage/storageAccounts",
+      "location": "[parameters('ContosoStorageAccount1_T12Location')]",
+      "apiVersion": "2015-05-01-preview",
+      "dependsOn": [ ],
+      "tags": {
+        "displayName": "TestContosoStorageAccount1_T12"
+      },
+      "properties": {
+        "accountType": "[parameters('ContosoStorageAccount1_T12Type')]"
+      }
+    },
+    {
+      "name": "[parameters('ContosoStorageAccount2_T12Name')]",
+      "type": "Microsoft.Storage/storageAccounts",
+      "location": "[parameters('ContosoStorageAccount2_T12Location')]",
+      "apiVersion": "2015-05-01-preview",
+      "dependsOn": [ ],
+      "tags": {
+        "displayName": "TestContosoStorageAccount2_T12"
+      },
+      "properties": {
+        "accountType": "[parameters('ContosoStorageAccount2_T12Type')]"
+      }
+    }
+  ],
+    "outputs": {
+    }
+}
