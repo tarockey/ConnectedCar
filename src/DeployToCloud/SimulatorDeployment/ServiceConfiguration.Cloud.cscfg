@@ -8,16 +8,9 @@
       <Setting name="Simulator.ScenarioDuration" value="00:10:00" />
       <Setting name="Simulator.SenderCountPerInstance" value="10" />
       <Setting name="Simulator.WarmUpDuration" value="0.00:00:30" />
-      <Setting name="Simulator.EventHubConnectionString" value="Endpoint=sb://t12ehns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Nmf4Fp3oNPifD6WDp5b/2LQrq14ALe0XvXABEBFPBaY=;TransportType=Amqp" />
+      <Setting name="Simulator.EventHubConnectionString" value="{your event hub here}" />
       <Setting name="Simulator.EventHubPath" value="t12eh" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="serverAdmin" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEHepqqUCymKhQalWLDUYT7kwDQYJKoZIhvcNAQEBBQAEggEAhbBKSXDELRY/syLUXeYCD65otlXdDRlBUDxPX90MWuTcZDna4e6+oTacBjkFO8ka182P9ExFgso3Q4K7EScJhvYbaSjC2q7sZB8A2QTHWw2VIg0DtgRTeL8EOrsbVOmVx+cyRSh/yylCwfSXvjirMwHQHTAyNt9HwOPBSn7zfyElvnyO8H87vzKpUoV5RpqiI6TbY3B1cyy/DO8TsLwa7H38Tn1iD4O/iOqrKx6T/VCZ+Nj5j51iK3GQ/s+MWkLST03OeuehF+MMSQvVUWaUHnSv+tB0eyLI4OZ1yZYRT/qmcEkJvw8LlH0lHuuLbeexr4YFq2+aWpeM2slhjR2L6jAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECPOByrIwEAUwgBB/6jMt9A5JSQucTUvjoE0w" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-08-06T23:59:59.0000000-07:00" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
-    </ConfigurationSettings>
-    <Certificates>
-      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="376974234B991B55F88FF45D348CA7A27D6E6C0F" thumbprintAlgorithm="sha1" />
-    </Certificates>
+     </ConfigurationSettings>
+
   </Role>
 </ServiceConfiguration>

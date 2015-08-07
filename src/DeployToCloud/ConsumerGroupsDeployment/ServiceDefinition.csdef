@@ -34,8 +34,6 @@
       <LocalStorage name="TelemetryArchive" cleanOnRoleRecycle="false" />
     </LocalResources>
     <Imports>
-      <Import moduleName="RemoteAccess" />
-      <Import moduleName="RemoteForwarder" />
     </Imports>
   </WorkerRole>
   <WorkerRole name="ColdStorage.WorkerRole" vmsize="Small">
@@ -71,7 +69,6 @@
       <LocalStorage name="TelemetryArchive" cleanOnRoleRecycle="false" />
     </LocalResources>
     <Imports>
-      <Import moduleName="RemoteAccess" />
     </Imports>
   </WorkerRole>
 </ServiceDefinition>

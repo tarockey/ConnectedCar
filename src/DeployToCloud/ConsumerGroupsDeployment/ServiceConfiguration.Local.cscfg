@@ -3,42 +3,35 @@
   <Role name="Cars.Dispatcher.WorkerRole">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Dispatcher.ConsumerGroupName" value="Dispatcher" />
+      <Setting name="Dispatcher.ConsumerGroupName" value="dispatcher" />
       <Setting name="Dispatcher.MaxBatchSize" value="500" />
       <Setting name="Dispatcher.PrefetchCount" value="2000" />
       <Setting name="Dispatcher.ReceiveTimeout" value="0.00:01:00" />
       <Setting name="Dispatcher.MaxConcurrencyPerProcessor" value="250" />
-      <Setting name="Dispatcher.CheckpointStorageAccount" value="DefaultEndpointsProtocol=https;AccountName=t12msgstore;AccountKey=ZPO27frQID/2OJq9ZGnQBeoj81li+Va3R5OYMjTaBG//wtHHam3/t+jBja0eioKjnHDeRhCeD3edi9pPfqPhiQ==" />
-      <Setting name="Dispatcher.EventHubConnectionString" value="Endpoint=sb://t12ehns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Nmf4Fp3oNPifD6WDp5b/2LQrq14ALe0XvXABEBFPBaY=;TransportType=Amqp" />
+      <Setting name="Dispatcher.CheckpointStorageAccount" value="{Storage Account Connection String}" />
+      <Setting name="Dispatcher.EventHubConnectionString" value="Endpoint=sb://{namespace}.servicebus.windows.net/;SharedAccessKeyName={access key name};SharedAccessKey={Access key};TransportType=Amqp" />
       <Setting name="Dispatcher.EventHubName" value="t12eh" />
-      <Setting name="Dispatcher.PoisonMessageStorageAccount" value="DefaultEndpointsProtocol=https;AccountName=t12msgstore;AccountKey=ZPO27frQID/2OJq9ZGnQBeoj81li+Va3R5OYMjTaBG//wtHHam3/t+jBja0eioKjnHDeRhCeD3edi9pPfqPhiQ==" />
+      <Setting name="Dispatcher.PoisonMessageStorageAccount" value="DefaultEndpointsProtocol=https;AccountName={account name};AccountKey={account key}" />
       <Setting name="Dispatcher.PoisonMessageContainer" value="poison-messages" />
       <Setting name="Handler.LongRunningTaskDuration" value="0.00:01:00" />
       <Setting name="Dispatcher.CircuitBreaker.WarningLevel" value="200" />
       <Setting name="Dispatcher.CircuitBreaker.TripLevel" value="400" />
       <Setting name="Dispatcher.CircuitBreaker.StallInterval" value="0.00:00:30" />
       <Setting name="Dispatcher.CircuitBreaker.LogCooldownInterval" value="0.00:30:00" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="serverAdmin" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEFo88GEVhwyPQtKP+KRBS3UwDQYJKoZIhvcNAQEBBQAEggEAGbeUgEEIaaIZGdFBIr9a5Rtfr6Deaiw1X2d9t/XqB2/4TtR8yY2mCkAGE1XPj0Qzfdu7tKAr/D7OFsW5M6wLo9/z2Rs4c0tzA/DgW1H8YgcGVuB5NpasvFoGdWGJ48cegY1GXCZaUIEj6AlZOSijjMJU0Xk+LDw5KKp72aQC6YW6UGjTxkoJEsoIxtLb2VqoMgraZ64R4cKAGt/ILjQViVmIHA1+4ZHTFi/W/kfN+gm5JrPWD7XNwRPpME5XUz4WA8RPstf9fmWOczgzvMpPr2gQaKDZ0/+AMSbM0b+cZ9Hy5UTKlJhKYtUIMii0UWIW6yO/1Dcf6ClVeG1KxpL1yzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECB75k256iOCSgBCZbwAnIWx4a/GvP9hc1t1R" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-08-06T23:59:59.0000000-07:00" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
-    </ConfigurationSettings>
-    <Certificates>
-      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="EDD78E7FE561A48E3CD7DEE0F758823A481385F7" thumbprintAlgorithm="sha1" />
-    </Certificates>
+     </ConfigurationSettings>
+    
   </Role>
   <Role name="ColdStorage.WorkerRole">
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Coldstorage.ConsumerGroupName" value="ColdStorage.Processor" />
-      <Setting name="Coldstorage.CheckpointStorageAccount" value="DefaultEndpointsProtocol=https;AccountName=t12msgstore;AccountKey=ZPO27frQID/2OJq9ZGnQBeoj81li+Va3R5OYMjTaBG//wtHHam3/t+jBja0eioKjnHDeRhCeD3edi9pPfqPhiQ==" />
-      <Setting name="Coldstorage.EventHubConnectionString" value="Endpoint=sb://t12ehns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Nmf4Fp3oNPifD6WDp5b/2LQrq14ALe0XvXABEBFPBaY=;TransportType=Amqp" />
+      <Setting name="Coldstorage.CheckpointStorageAccount" value="DefaultEndpointsProtocol=https;AccountName={account name};AccountKey={account key}" />
+      <Setting name="Coldstorage.EventHubConnectionString" value="Endpoint=sb://{namespace}.servicebus.windows.net/;SharedAccessKeyName={key name};SharedAccessKey={key};TransportType=Amqp" />
       <Setting name="Coldstorage.EventHubName" value="t12eh" />
       <Setting name="Coldstorage.MaxBatchSize" value="1000" />
       <Setting name="Coldstorage.PreFetchCount" value="10000" />
       <Setting name="Coldstorage.ReceiveTimeout" value="0.01:00:00" />
-      <Setting name="Coldstorage.BlobWriterStorageAccount" value="DefaultEndpointsProtocol=https;AccountName=t12msgstore;AccountKey=ZPO27frQID/2OJq9ZGnQBeoj81li+Va3R5OYMjTaBG//wtHHam3/t+jBja0eioKjnHDeRhCeD3edi9pPfqPhiQ==" />
+      <Setting name="Coldstorage.BlobWriterStorageAccount" value="DefaultEndpointsProtocol=https;AccountName={storage name};AccountKey={storage key}" />
       <Setting name="Coldstorage.RollSizeForBlobWriterMb" value="2048" />
       <Setting name="Coldstorage.ContainerName" value="coldstorage" />
       <Setting name="Coldstorage.BlobPrefix" value="pnp-datapipeline" />
@@ -46,13 +39,8 @@
       <Setting name="Coldstorage.circuitbreaker.TripLevel" value="400" />
       <Setting name="Coldstorage.circuitbreaker.StallInterval" value="0.00:00:30" />
       <Setting name="Coldstorage.circuitbreaker.LogCooldownInterval" value="0.00:15:00" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="serverAdmin" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEFo88GEVhwyPQtKP+KRBS3UwDQYJKoZIhvcNAQEBBQAEggEAGbeUgEEIaaIZGdFBIr9a5Rtfr6Deaiw1X2d9t/XqB2/4TtR8yY2mCkAGE1XPj0Qzfdu7tKAr/D7OFsW5M6wLo9/z2Rs4c0tzA/DgW1H8YgcGVuB5NpasvFoGdWGJ48cegY1GXCZaUIEj6AlZOSijjMJU0Xk+LDw5KKp72aQC6YW6UGjTxkoJEsoIxtLb2VqoMgraZ64R4cKAGt/ILjQViVmIHA1+4ZHTFi/W/kfN+gm5JrPWD7XNwRPpME5XUz4WA8RPstf9fmWOczgzvMpPr2gQaKDZ0/+AMSbM0b+cZ9Hy5UTKlJhKYtUIMii0UWIW6yO/1Dcf6ClVeG1KxpL1yzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECB75k256iOCSgBCZbwAnIWx4a/GvP9hc1t1R" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-08-06T23:59:59.0000000-07:00" />
+      
     </ConfigurationSettings>
-    <Certificates>
-      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="EDD78E7FE561A48E3CD7DEE0F758823A481385F7" thumbprintAlgorithm="sha1" />
-    </Certificates>
+
   </Role>
 </ServiceConfiguration>
